@@ -7,8 +7,10 @@ class Person{
         string name;
         int age;
         string address;
+	string id;
     public:
-        Person(string name, int age, string address);
+	void setId(string id);
+	string getId();
         string getName();
         void setName(string name);
         int getAge();
@@ -16,11 +18,6 @@ class Person{
         string getAddress();
         void setAddress(string address);
 };
-Person::Person(string name, int age, string address){
-    this->name=name;
-    this->age=age;
-    this->address=address;
-}
 string Person::getName(){
     return name;
 }
@@ -39,34 +36,19 @@ string Person::getAddress(){
 void Person::setAddress(string address){
     this->address = address;
 }
-
-// class Student : public Person{
-//     private:
-//         string msv;
-//         double phinoitru;
-//         double cmnd;
-//         int sophong;
-//         int solanvipham;
-//     public:
-        
-// };
+double Student::getId() {
+	return id;
+}
+void Student::setId(double id) {
+	this->id = id;
+}
 class Student : public Person {
 private:
-	double id; //mã sinh viên
 	double identitycard; //số CMND
 	int room; // số phòng ở
 	double boardingfee; //phí nội trú
 	int violations; //số lần vi phạm
 public:
-	Student(string name, int age, string address, double id,  double identitycar, int roomnumber, double boardingfee, int violations) : Person(name, age, address){
-        this->id = id;
-        this->identitycard = identitycar;
-        this->room = room;
-        this->boardingfee = boardingfee;
-        this->violations = violations;
-    }
-	void setId(double id);
-	double getId();
 	void setIdentitycard(double identitycar);
 	double getIdentitycardnumber();
 	void setRoom(int room);
@@ -80,19 +62,6 @@ public:
 };
 //Khai báo phương thức bên ngoài lớp
 
-// Student::Student(double id,  double identitycar, int room, double boardingfee, int violations) : Person(name, age, address){
-// 	this->id = id;
-// 	this->identitycard = identitycar;
-// 	this->room = room;
-// 	this->boardingfee = boardingfee;
-// 	this->violations = violations;
-// }
-double Student::getId() {
-	return id;
-}
-void Student::setId(double id) {
-	this->id = id;
-}
 double Student::getIdentitycardnumber() {
 	return identitycard;
 }
