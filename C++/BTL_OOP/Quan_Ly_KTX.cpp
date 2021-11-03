@@ -927,3 +927,12 @@ void Dormitory::TotalMoney(){
     cout<<"Manager's total salary: "<<Tongluong<<endl;
     cout<<"Total dormitory rent: "<<Tongphi;
 }
+
+void menu(){
+    giaodien();
+    int chon;
+    cout << "Nhap lua chon: ";
+    cin >> chon;
+
+}
+	
