@@ -1,5 +1,15 @@
 #include <iostream>
+#include <string>#include <iostream>
 #include <string>
+#include <vector>
+#include <Windows.h>
+#include <cstdlib>
+#include <ctime>
+#include <math.h>
+#include "setcolor.h"
+#include <conio.h>
+#include <cstdlib>
+
 using namespace std;
 
 int numberStudent(int &n){
